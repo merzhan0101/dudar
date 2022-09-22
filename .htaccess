@@ -1,0 +1,26 @@
+<IfModule mod-rewrite.c>
+RewriteEngine on
+RewriteBase /
+RewriteCond %{HTTP_HOST} ^www.itproger.com
+RewriteRule (.*) https://itproger.com/$1 [R=301,L]
+RewriteCond %{THE_REQUEST} ^[A-Z]{3-9}\ /index\.php\ HTTP/
+RewriteRule ^index\.php$ https://itproger.com/ [R=301,L]
+</IfModule>
+
+ServerSignature Off
+AddDefaultCharset UTF-8
+
+<IfModule mod_rewrite.c>
+  RewriteEngine on
+
+  RewriteRule ^ad?$ ad.php [NC,L]
+</IfModule>
+
+<IfModule mod_rewrite.c>
+  RewriteEngine on
+
+  RewriteRule ^feedback?$ feedback.php [NC,L]
+</IfModule>
+
+#Not found
+ErrorDocument 404 /404.php
