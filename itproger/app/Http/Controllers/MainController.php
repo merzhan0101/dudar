@@ -41,4 +41,12 @@ class MainController extends Controller
         //переадресация на review
         return redirect()->route('review');
     }
+
+    public function news(){
+        return view('news');
+    }
+
+    public function contacts(){
+        return view('contacts');
+    }
 }

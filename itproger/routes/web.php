@@ -21,6 +21,10 @@ Route::get('/review', 'App\Http\Controllers\MainController@review')->name('revie
 
 Route::post('/review/check', 'App\Http\Controllers\MainController@review_check');
 
+Route::get('/news', 'App\Http\Controllers\MainController@news');
+
+Route::get('/contacts', 'App\Http\Controllers\MainController@contacts');
+
 // Route::get('/user/{id}/{name}', function($id, $name){
 //     return 'ID: '. $id.'. Name: '.$name;
 // });
